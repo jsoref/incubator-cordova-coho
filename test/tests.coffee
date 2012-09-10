@@ -173,7 +173,7 @@ exports['check docs version number'] = (test)->
 		test.ok true, "VERSION file matches release version"
 		test.done()
 
-exports['docs script successfull'] = (test)->
+exports['docs script successful'] = (test)->
 	test.expect 1
 	test.ok require('path').existsSync("./temp/repositories/incubator-cordova-docs/public")
 	test.done()
@@ -216,17 +216,17 @@ exports['test if doc md5 is empty'] = (test)->
 	test.ok fs.statSync("./temp/release/doc/cordova-"+VERSION+"-incubating-doc.zip.md5").size != 0, 'doc md5 created too soon'
 	test.done()	
 		
-exports['ios script successfull'] = (test)->
+exports['ios script successful'] = (test)->
 	test.expect 1
 	test.ok require('path').existsSync("./temp/repositories/incubator-cordova-ios/dist/Cordova-"+VERSION+".dmg")
 	test.done()
 		
-exports['android script successfull'] = (test)->
+exports['android script successful'] = (test)->
 	test.expect 1
 	test.ok require('path').existsSync("./temp/repositories/incubator-cordova-android/example/libs/cordova-"+VERSION+".jar")
 	test.done()
 
-exports['blackberry script successfull'] = (test)->
+exports['blackberry script successful'] = (test)->
 	test.expect 1
 	test.ok require('path').existsSync("./temp/repositories/incubator-cordova-blackberry-webworks/dist/www/cordova-"+VERSION+".js")
 	test.done()
